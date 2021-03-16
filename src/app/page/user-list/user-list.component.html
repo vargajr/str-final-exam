@@ -1,9 +1,20 @@
 <div class="row">
-  <div class="col-12 mt-2">
+  <div class="col-4 mt-2">
     <h2>User List</h2>
+  </div>
+  <div class="col-4 mt-2">
+    <p class="text-right pt-2">Filter by name: </p>
+  </div>
+  <div class="col-4 mt-2">
+    <input [formControl]="phraseControl" type="text" class="form-control">
+  </div>
+  <div class="col-12">
     <button class="btn btn-success btn-block btn-lg" routerLink="user/0">
       Create a new user record
     </button>
+  </div>
+  
+  <div class="col-12">
     <table class="table table-striped">
       <thead>
         <tr>
@@ -16,7 +27,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let user of users$ | async">
+        <tr *ngFor="let user of users$ | async | filter:phrase">
           <td>{{ user.id }}</td>
           <td>{{ user.name }}</td>
           <td>{{ user.email }}</td>
