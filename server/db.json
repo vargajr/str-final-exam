@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 2,
-      "name": "Granville Taplin",
+      "name": "Granville Toppel",
       "email": "gtaplin1@vk.com",
       "address": "274 Jenna Center",
       "active": true
@@ -30,7 +30,7 @@
     },
     {
       "id": 10,
-      "name": "Nana Stalley",
+      "name": "Natasa Stalley",
       "email": "nstalley9@sfgate.com",
       "address": "969 Oak Valley Pass",
       "active": false

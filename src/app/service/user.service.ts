@@ -57,6 +57,6 @@ export class UserService {
    * The method is: this.http.patch
    */
   update(record:User):Observable<User> {
-    return this.http.patch<User>(`${this.endpoint}`, record);
+    return this.http.patch<User>(`${this.endpoint}/${record.id}`, record);
   }
 }
