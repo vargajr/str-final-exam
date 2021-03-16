@@ -16,6 +16,7 @@ export class UserListComponent implements OnInit {
   selectedItemToDelete:User = new User();
   phraseControl: FormControl = new FormControl('');
   phrase: string = '';
+  orderBy:string = '';
 
   constructor(
     private userService: UserService,
@@ -24,7 +25,7 @@ export class UserListComponent implements OnInit {
   ngOnInit(): void {
     this.userService.getAll();
     this.phraseControl.valueChanges.pipe(
-      debounceTime(700)
+      debounceTime(500)
     )
     .subscribe(
       newValue => this.phrase = newValue
@@ -41,5 +42,9 @@ export class UserListComponent implements OnInit {
         this.userService.getAll();
       }
     );
+  }
+
+  onOrder(columnName:string):void {
+    this.orderBy = columnName;
   }
 }

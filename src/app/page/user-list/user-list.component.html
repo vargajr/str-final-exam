@@ -18,16 +18,16 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>#</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Address</th>
-          <th>Active</th>
+          <th class="table--header" (click)="onOrder('id')">#</th>
+          <th class="table--header" (click)="onOrder('name')">Name</th>
+          <th class="table--header" (click)="onOrder('email')">Email</th>
+          <th class="table--header" (click)="onOrder('address')">Address</th>
+          <th class="table--header" (click)="onOrder('active')">Active</th>
           <th></th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let user of users$ | async | filter:phrase">
+        <tr *ngFor="let user of users$ | async | filter:phrase | sorter:orderBy">
           <td>{{ user.id }}</td>
           <td>{{ user.name }}</td>
           <td>{{ user.email }}</td>

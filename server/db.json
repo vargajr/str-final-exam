@@ -9,7 +9,7 @@
     },
     {
       "id": 3,
-      "name": "Marius Beddows",
+      "name": "Markus Beddows",
       "email": "mbeddows2@topsy.com",
       "address": "5 Kennedy Drive",
       "active": false
@@ -41,13 +41,6 @@
       "email": "shemblinga@narod.ru",
       "address": "0 Kim Street",
       "active": true
-    },
-    {
-      "id": 12,
-      "name": "Gawain McKillop",
-      "email": "gmckillopb@geocities.jp",
-      "address": "0 School Way",
-      "active": false
     },
     {
       "id": 14,
