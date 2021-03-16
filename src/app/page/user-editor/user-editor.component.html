@@ -10,7 +10,12 @@
         class="form-control"
         type="text"
         name="name"
-        [(ngModel)]="user.name">
+        [(ngModel)]="user.name"
+        pattern=".{8,40}"
+        required>
+        <div [hidden]="userForm.controls.name?.valid" class="error-message">
+          Min 8 char, max 40 char, required.
+        </div>
       </div>
       <div class="form-group">
         <label>Email</label>
@@ -20,16 +25,26 @@
           class="form-control"
           type="text"
           name="email"
-          [(ngModel)]="user.email">
-        </div>
-        <div class="form-group">
+          [(ngModel)]="user.email"
+          [pattern]="emailRegexp"
+          required>
+          <div [hidden]="userForm.controls.email?.valid" class="error-message">
+            Valid email, required.
+          </div>
+      </div>
+      <div class="form-group">
           <label>Address</label>
           <!-- Validation: min 8 char, max 100 char, required -->
           <input
           class="form-control"
           type="text"
           name="address"
-          [(ngModel)]="user.address">
+          [(ngModel)]="user.address"
+          pattern=".{8,100}"
+          required>
+          <div [hidden]="userForm.controls.address?.valid" class="error-message">
+            Min 8 char, max 100 char, required.
+          </div>
       </div>
       <div class="form-group">
         <label>Active</label>

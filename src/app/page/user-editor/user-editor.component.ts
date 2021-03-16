@@ -12,7 +12,7 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./user-editor.component.scss']
 })
 export class UserEditorComponent implements OnInit {
-  
+
   user$: Observable<User> = this.activatedRoute.params.pipe(
     switchMap(params => {
       if (Number(params.id) === 0) {
@@ -24,6 +24,7 @@ export class UserEditorComponent implements OnInit {
   );
 
   updating: boolean = false;
+  emailRegexp:string = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
 
   constructor(
     private userService: UserService,

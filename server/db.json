@@ -33,7 +33,7 @@
       "name": "Natasa Stalley",
       "email": "nstalley9@sfgate.com",
       "address": "969 Oak Valley Pass",
-      "active": false
+      "active": true
     },
     {
       "id": 11,
@@ -657,6 +657,20 @@
       "email": "mcosbee2r@go.com",
       "address": "0642 Spaight Junction",
       "active": false
+    },
+    {
+      "id": 101,
+      "name": "Sebaj Tóbiás",
+      "email": "tobi@mailer.com",
+      "address": "Keserű retek utca 4.",
+      "active": true
+    },
+    {
+      "id": 102,
+      "name": "Huncut Piroska",
+      "email": "piri@server.domain",
+      "address": "Futrinka utca 1",
+      "active": true
     }
   ]
 }
